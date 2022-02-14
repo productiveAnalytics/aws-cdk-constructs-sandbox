@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.prod8tive.linear.infra</groupId>
+    <artifactId>cdk_buildingblocks_datasync</artifactId>
+    <version>6.0-TEST</version> <!-- version must match property building.blocks.version -->
+	<!--version>${building.blocks.version}</version-->
+
+    <name>cdk_building_blocks_datasync</name>
+
+    <scm>
+        <connection>scm:git:git@gitlab.prod8tive.com:dtci-dp-yoda/linear-infrastructure/linear-cdk.git</connection>
+        <url>scm:git:git@gitlab.prod8tive.com:dtci-dp-yoda/linear-infrastructure/linear-cdk.git</url>
+        <developerConnection>scm:git:git@gitlab.prod8tive.com:dtci-dp-yoda/linear-infrastructure/linear-cdk.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+        <cdk.version>2.8.0</cdk.version>
+        <sdk.verson>2.17.107</sdk.verson>
+        <constructs.version>[10.0.0,11.0.0)</constructs.version>
+        <junit.version>5.7.1</junit.version>
+        <jackson.version>2.9.9</jackson.version>
+
+        <building.blocks.version>6.0-TEST</building.blocks.version>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-release</id>
+            <name>releases</name>
+            <url>https://nexus.dtci.co/repository/DTCI-Releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>snapshots</name>
+            <url>https://nexus.dtci.co/repository/DTCI-Snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>internal-repository-group</id>
+            <name>repo-name</name>
+            <url>https://nexus.dtci.co/repository/DTCI-Thirdparty/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+
+        <!--        <repository>-->
+        <!--            <id>nexus-release</id>-->
+        <!--            <name>releases</name>-->
+        <!--            <url>https://nexus.dtci.co/repository/DTCI-Releases/</url>-->
+        <!--        </repository>-->
+
+        <repository>
+            <id>internal-repository-group2</id>
+            <name>repo-name2</name>
+            <url>https://nexus.dtci.co/repository/DTCI-Releases/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <dependencyManagement>
+	  <dependencies>
+	    <dependency>
+	      <groupId>software.amazon.awssdk</groupId>
+	      <artifactId>bom</artifactId>
+	      <version>${sdk.verson}</version>
+	      <type>pom</type>
+	      <scope>import</scope>
+	    </dependency>
+	  </dependencies>
+	</dependencyManagement>
+
+    <dependencies>
+        <!-- AWS Cloud Development Kit -->
+        <dependency>
+            <groupId>software.amazon.awscdk</groupId>
+            <artifactId>aws-cdk-lib</artifactId>
+            <version>${cdk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>software.constructs</groupId>
+            <artifactId>constructs</artifactId>
+            <version>${constructs.version}</version>
+        </dependency>
+
+        <!-- AWS SDK v2 -->
+		<dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>s3</artifactId>
+        </dependency>
+
+		<dependency>
+		  <groupId>com.opencsv</groupId>
+		  <artifactId>opencsv</artifactId>
+		  <version>5.5.2</version>
+		</dependency>
+
+        <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter</artifactId>
+          <version>${junit.version}</version>
+          <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+    </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <!--  plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>com.prod8tive.linear.infroa.MyCdkGlueStack</mainClass>
+                </configuration>
+            </plugin -->
+        </plugins>
+    </build>
+</project>
