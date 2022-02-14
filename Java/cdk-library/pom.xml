@@ -2,20 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.prod8tive.linear.infra</groupId>
-    <artifactId>cdk_buildingblocks_datasync</artifactId>
-    <version>6.0-TEST</version> <!-- version must match property building.blocks.version -->
-	<!--version>${building.blocks.version}</version-->
+    <groupId>com.prod8tive.infra</groupId>
+    <artifactId>cdk_building_blocks</artifactId>
+    <!-- version must match property building.blocks.version -->
+	<version>${building.blocks.version}</version>
 
-    <name>cdk_building_blocks_datasync</name>
-
-    <scm>
-        <connection>scm:git:git@gitlab.prod8tive.com:dtci-dp-yoda/linear-infrastructure/linear-cdk.git</connection>
-        <url>scm:git:git@gitlab.prod8tive.com:dtci-dp-yoda/linear-infrastructure/linear-cdk.git</url>
-        <developerConnection>scm:git:git@gitlab.prod8tive.com:dtci-dp-yoda/linear-infrastructure/linear-cdk.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
+    <name>cdk_building_blocks</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,7 +18,7 @@
         <junit.version>5.7.1</junit.version>
         <jackson.version>2.9.9</jackson.version>
 
-        <building.blocks.version>6.0-TEST</building.blocks.version>
+        <building.blocks.version>7.0</building.blocks.version>
     </properties>
 
     <distributionManagement>

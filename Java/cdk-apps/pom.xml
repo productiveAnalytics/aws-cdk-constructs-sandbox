@@ -3,8 +3,8 @@
          xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.prod8tive.linear.infra</groupId>
-    <artifactId>datasync_firehose_stack</artifactId>
+    <groupId>com.prod8tive.infra</groupId>
+    <artifactId>datasync_stack</artifactId>
 
     <!-- synchronized versions -->
     <version>${building.blocks.version}</version> <!-- version must match property building.blocks.version -->
@@ -16,8 +16,8 @@
         <constructs.version>[10.0.0,11.0.0)</constructs.version>
         <junit.version>5.7.1</junit.version>
 
-        <building.blocks.artifact.id>cdk_buildingblocks_datasync</building.blocks.artifact.id>
-        <building.blocks.version>6.0-TEST</building.blocks.version>
+        <building.blocks.artifact.id>cdk_building_blocks</building.blocks.artifact.id>
+        <building.blocks.version>7.0</building.blocks.version>
     </properties>
     <distributionManagement>
         <repository>
@@ -82,7 +82,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.disney.linear.infra</groupId>
+            <groupId>com.prod8tive.infra</groupId>
             <artifactId>${building.blocks.artifact.id}</artifactId>
             <version>${building.blocks.version}</version>
         </dependency>
