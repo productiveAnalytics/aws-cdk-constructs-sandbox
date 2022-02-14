@@ -1,0 +1,46 @@
+@Library('pipeline-library@feature-DASF-pipeline-kinesis') _
+pipeline_generic_deployment_aws_cdk {
+ 
+    // Set pipeline node label
+    labels = "ec2agent" 
+  
+    // Stage Variables
+    overrideBuildStages = [infrastructure:  [mvnSettingsFlag: false, assumeIAMRoleFlag: true, registryAuthFlag: false, ASAFlag: false, snykFlag: false, dockerUploadFlag: false, sonarFlag: false, parameterStoreGet: false, whitehatFlag: false, startAppKinesisFlag:false, compileFlag:false, testFlag:false, mvnPackageFlag:false, functionalTestFlag:false,checkstyleFlag:false, findbugsFlag:false, resourcecdkjava:true, uploadArtifactFlag:true, releaseFlag:true, dockerBuildFlag:false,dockerUploadFlag:false, cfStackUpdate:false,awsS3UploadFlag:false,archiveArtifactsFlag:false, createAppKinesisFlag:false,updateAppKinesis:false],
+                           update:  [mvnSettingsFlag: true, assumeIAMRoleFlag: true, registryAuthFlag: true, ASAFlag: false, snykFlag: false, dockerUploadFlag: false, sonarFlag: false, parameterStoreGet: false, whitehatFlag: false, startAppKinesisFlag:false, compileFlag:false, testFlag:false, mvnPackageFlag:false, functionalTestFlag:false,checkstyleFlag:false, findbugsFlag:false, uploadArtifactFlag:false, releaseFlag:false, dockerBuildFlag:false,dockerUploadFlag:false, cfStackUpdate:false,awsS3UploadFlag:false,archiveArtifactsFlag:false, createAppKinesisFlag:false,updateAppKinesis:true,resourcecdkjava:true],
+                           snapshot: [mvnSettingsFlag: true, assumeIAMRoleFlag: true, registryAuthFlag: true, ASAFlag: false, snykFlag: false, dockerUploadFlag: false, sonarFlag: false, parameterStoreGet: false, whitehatFlag: false, startAppKinesisFlag:false, compileFlag:false, testFlag:false, mvnPackageFlag:false, functionalTestFlag:false,checkstyleFlag:false, findbugsFlag:false, uploadArtifactFlag:false, releaseFlag:false, dockerBuildFlag:false,dockerUploadFlag:false, cfStackUpdate:false,awsS3UploadFlag:false,archiveArtifactsFlag:false, createAppKinesisFlag:false],
+                           release:  [mvnSettingsFlag: true, assumeIAMRoleFlag: true, registryAuthFlag: true, uploadArtifactFlag:true,  releaseFlag: true, autoDeployFlag: true, cfStackUpdate: true],
+                           merge:    [mvnSettingsFlag: true, assumeIAMRoleFlag: true, registryAuthFlag: true]]
+ 
+    
+   
+    // Role Variables
+    //Last awsGenericRoleArns for Nonprod
+    //awsGenericRoleArns = ['arn:aws:iam::646374784610:role/cdeng-pipeline-jenkins-nonprod']
+    //New awsGenericRoleArns for Prod
+    awsGenericRoleArns = ['arn:aws:iam::017504420768:role/cdeng-pipeline-jenkins-prod']
+    //awsRoleArns = ['arn:aws:iam::916991015537:role/dtci-cdeng-cicd-admin']
+    
+  /*awsRoleArns = [
+        "SBX_AWS_ACCOUNT_INFO":["arn:aws:iam::887847050650:role/dtci-cdeng-cicd-admin"],
+        "DEV_AWS_ACCOUNT_INFO":["arn:aws:iam::916991015537:role/dtci-cdeng-cicd-admin"],
+        "qa":["arn:aws:iam::081234930819:role/dtci-cdeng-cicd-admin"],
+        "prod":["arn:aws:iam::542230711021:role/dtci-cdeng-cicd-admin"]
+    ]*/
+
+awsRoleArns = ["arn:aws:iam::887847050650:role/dtci-cdeng-cicd-admin"]
+    
+awsAccount = [
+        "SBX_AWS_ACCOUNT_INFO":"887847050650",
+        "DEV_AWS_ACCOUNT_INFO":"916991015537",
+        "qa":"081234930819",
+        "prod":"542230711021"
+    ]
+
+    awsEnvironment = [
+        "SBX_AWS_ACCOUNT_INFO":"sbx",
+        "DEV_AWS_ACCOUNT_INFO":"dev",
+        "qa":"081234930819",
+        "prod":"542230711021"
+    ]
+    
+}

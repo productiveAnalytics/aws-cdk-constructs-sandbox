@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.prod8tive.linear.infra</groupId>
+    <artifactId>datasync_firehose_stack</artifactId>
+
+    <!-- synchronized versions -->
+    <version>${building.blocks.version}</version> <!-- version must match property building.blocks.version -->
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <cdk.version>2.8.0</cdk.version>
+        <constructs.version>[10.0.0,11.0.0)</constructs.version>
+        <junit.version>5.7.1</junit.version>
+
+        <building.blocks.artifact.id>cdk_buildingblocks_datasync</building.blocks.artifact.id>
+        <building.blocks.version>6.0-TEST</building.blocks.version>
+    </properties>
+    <distributionManagement>
+        <repository>
+            <id>nexus-release</id>
+            <name>releases</name>
+            <url>https://nexus.dtci.co/repository/DTCI-Releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>snapshots</name>
+            <url>https://nexus.dtci.co/repository/DTCI-Snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>internal-repository-group</id>
+            <name>repo-name</name>
+            <url>https://nexus.dtci.co/repository/DTCI-Thirdparty/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+
+
+        <!--        <repository>-->
+        <!--            <id>nexus-release</id>-->
+        <!--            <name>releases</name>-->
+        <!--            <url>https://nexus.dtci.co/repository/DTCI-Releases/</url>-->
+        <!--        </repository>-->
+
+        <repository>
+            <id>internal-repository-group2</id>
+            <name>repo-name2</name>
+            <url>https://nexus.dtci.co/repository/DTCI-Releases/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
+    <dependencies>
+        <!-- AWS Cloud Development Kit -->
+        <dependency>
+            <groupId>software.amazon.awscdk</groupId>
+            <artifactId>aws-cdk-lib</artifactId>
+            <version>${cdk.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.disney.linear.infra</groupId>
+            <artifactId>${building.blocks.artifact.id}</artifactId>
+            <version>${building.blocks.version}</version>
+        </dependency>
+
+        <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter</artifactId>
+          <version>${junit.version}</version>
+          <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <mainClass>com.prod8tive.linear.infra.DataSyncCdkStackApp</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

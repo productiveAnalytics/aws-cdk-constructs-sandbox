@@ -1,0 +1,466 @@
+{
+    "EventSourceMappings": [
+        {
+            "UUID": "bcb51f58-724f-4e56-8f57-ddd074981c01",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:45.306000-06:00",
+            "LastProcessingResult": "PROBLEM: Lambda function error: Unhandled",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_prpsl__flight_day"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "58fe67be-1e0f-4e32-bb03-307977c4af5d",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:45.945000-06:00",
+            "LastProcessingResult": "OK",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_invntry__flght_rng"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "3fffafe9-1c4d-4de9-a379-a18d6c5256a8",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:45.410000-06:00",
+            "LastProcessingResult": "PROBLEM: Lambda function error: Unhandled",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_prpsl__flight_quarter"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "9d276e83-709a-4d83-858e-2776109d52be",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:56.270000-06:00",
+            "LastProcessingResult": "PROBLEM: Lambda function error: Unhandled",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_prpsl__flight_month"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "a0629f44-1db1-4164-8b4a-bdcc0a4d967a",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:58.117000-06:00",
+            "LastProcessingResult": "OK",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "tcs__flight_dates"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "fcce1a3e-e399-404e-9d80-6891cf3091ec",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:46.108000-06:00",
+            "LastProcessingResult": "PROBLEM: Lambda function error: Unhandled",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_rtcrd__flight_quarter"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "989a8154-0b13-45a0-aee3-f3dbed47d582",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:45.644000-06:00",
+            "LastProcessingResult": "OK",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_prpsl__flight_range"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "0eda2be5-bb79-44cd-81ca-55ef7d276af9",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:45.347000-06:00",
+            "LastProcessingResult": "OK",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_dlmgmt__flght_rng"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "9de1d7e9-40e9-42e1-bb89-2f64b7c611ab",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:45.301000-06:00",
+            "LastProcessingResult": "OK",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_prpsl__flight_week"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "ba2a29da-a702-406c-b284-a53918487231",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:58.533000-06:00",
+            "LastProcessingResult": "OK",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "conformance_target_concommon__flght_rng"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        },
+        {
+            "UUID": "07885d8b-1ecf-44ad-9303-3b73eea23962",
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": 500,
+            "FunctionArn": "arn:aws:lambda:us-east-1:887847050650:function:LinearLambdaCdkStack-laaplambdakafkatofirehosecdkt-qmTScGfRLlyf",
+            "LastModified": "2022-01-14T18:06:46.277000-06:00",
+            "LastProcessingResult": "OK",
+            "State": "Enabled",
+            "StateTransitionReason": "USER_INITIATED",
+            "Topics": [
+                "ads_rtcrd__flight_range"
+            ],
+            "SourceAccessConfigurations": [
+                {
+                    "Type": "SASL_SCRAM_512_AUTH",
+                    "URI": "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg"
+                },
+                {
+                    "Type": "VPC_SECURITY_GROUP",
+                    "URI": "sg-07cdf76c4fb8ab665"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-078c2c0b80d90c581"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0dcedda2b26cf6a51"
+                },
+                {
+                    "Type": "VPC_SUBNET",
+                    "URI": "subnet-0cdc8148525891735"
+                }
+            ],
+            "SelfManagedEventSource": {
+                "Endpoints": {
+                    "KAFKA_BOOTSTRAP_SERVERS": [
+                        "us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"
+                    ]
+                }
+            }
+        }
+    ]
+}
