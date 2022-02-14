@@ -1,0 +1,66 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSKMSAccess",
+      "Effect": "Allow",
+      "Action": [
+        "kms:Decrypt",
+        "kms:GenerateDataKey",
+        "kms:DescribeKey"
+      ],
+      "Resource": [
+        "arn:aws:kms:us-east-1:887847050650:key/48616002-bd78-4a43-8fd4-b5397ead562d",
+        "arn:aws:kms:us-east-1:887847050650:key/46f800bb-eedf-4511-b58f-71f7d9a5911b"
+      ]
+    },
+    {
+      "Sid": "AWSSecretManagerAccess",
+      "Effect": "Allow",
+      "Action": "secretsmanager:*",
+      "Resource": [
+        "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarviskafkaconn-sbx-2yJawg",
+        "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-datasinkapp-snowflake-sbx-VkLD59",
+        "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-datavalidation-snowflake-sbx-0mC7Jw"
+      ]
+    },
+    {
+      "Sid": "AWSS3Access",
+      "Effect": "Allow",
+      "Action": ["s3:*"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AWSGlueSchemaRegistry",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetRegistry",
+        "glue:ListRegistries",
+        "glue:GetSchema",
+        "glue:ListSchemas",
+        "glue:GetSchemaByDefinition",
+        "glue:GetSchemaVersion",
+        "glue:ListSchemaVersions",
+        "glue:GetSchemaVersionsDiff",
+        "glue:CheckSchemaVersionValidity",
+        "glue:QuerySchemaVersionMetadata",
+        "glue:GetTags",
+        "glue:StartJobRun"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "AWSLambdaTracerAccessExecution",
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}

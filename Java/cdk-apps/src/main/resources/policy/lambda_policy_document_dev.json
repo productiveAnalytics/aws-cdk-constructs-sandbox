@@ -1,0 +1,59 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSKMSAccess",
+      "Effect": "Allow",
+      "Action": [
+        "kms:Decrypt",
+        "kms:GenerateDataKey",
+        "kms:DescribeKey"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AWSSecretManagerAccess",
+      "Effect": "Allow",
+      "Action": "secretsmanager:*",
+      "Resource": "*"
+    },
+    {
+      "Sid": "AWSS3Access",
+      "Effect": "Allow",
+      "Action": ["s3:*"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "AWSGlueSchemaRegistry",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetRegistry",
+        "glue:ListRegistries",
+        "glue:GetSchema",
+        "glue:ListSchemas",
+        "glue:GetSchemaByDefinition",
+        "glue:GetSchemaVersion",
+        "glue:ListSchemaVersions",
+        "glue:GetSchemaVersionsDiff",
+        "glue:CheckSchemaVersionValidity",
+        "glue:QuerySchemaVersionMetadata",
+        "glue:GetTags",
+        "glue:StartJobRun"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "AWSLambdaTracerAccessExecution",
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+confluentLayerName: "confluent1-7-with-python3-8"
+confluentLayerArn: "arn:aws:lambda:us-east-1:887847050650:layer:confluent1-7-with-python3-8:1"
+pythonLayerName: "AWSDataWrangler-Python38"
+pythonLayerArn: "arn:aws:lambda:us-east-1:336392948345:layer:AWSDataWrangler-Python38:1"
+lambdaRoleArn: "arn:aws:iam::887847050650:role/laap-role-data-gen-datasink-lambda-sbx"
+securityGroupId: "sg-07cdf76c4fb8ab665"
+vpcId: "vpc-04951cdf0421e5803"
+privateSubnetIds: ["subnet-078c2c0b80d90c581", "subnet-0cdc8148525891735", "subnet-0dcedda2b26cf6a51"]
+availabilityZones: ["us-east-1a", "us-east-1b", "us-east-1c"]
+eventSourceTriggerVpcSubnets: ["subnet-078c2c0b80d90c581", "subnet-0cdc8148525891735","subnet-0dcedda2b26cf6a51"]
+kafkaBootstrapServerList: ["us-east-1-adsales-sb-main.data-integration.dtcisb.technology:9092"]
+kafkaConnectionSecretName: "laap-sec-ue1-jarvis-kafka-datasink-credentials-sbx"
+kafkaConnectionSecretArn: "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarvis-kafka-datasink-credentials-sbx-daXQCH"
+schemaRegistryUrl: "https://us-east-1-adsales-sb-main.data-integration.dtcisb.technology:8080"
+schemaRegistryConnectionSecretName: "laap-sec-ue1-jarvis-schema-credentials-sbx"
+schemaRegistryConnectionSecretArn: "arn:aws:secretsmanager:us-east-1:887847050650:secret:laap-sec-ue1-jarvis-schema-credentials-sbx-MYnkcV"
+lambdaFilePath: "./src/main/resources/function"
+lambdaPolicyDocumentFilePath: "./src/main/resources/policy/lambda_policy_document_<env>.json"
