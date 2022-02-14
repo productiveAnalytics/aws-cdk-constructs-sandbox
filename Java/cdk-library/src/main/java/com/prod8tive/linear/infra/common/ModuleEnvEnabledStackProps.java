@@ -1,7 +1,7 @@
-package com.disney.linear.infra.common;
+package com.prod8ctive.infra.common;
 
-import static com.disney.linear.infra.common.CdkConstants.GLUE_DATABASE_PATTERN__LANDING;
-import static com.disney.linear.infra.common.CdkConstants.GLUE_DATABASE_PATTERN__CONFORMANCE;
+import static com.prod8ctive.infra.common.CdkConstants.GLUE_DATABASE_PATTERN__LANDING;
+import static com.prod8ctive.infra.common.CdkConstants.GLUE_DATABASE_PATTERN__CONFORMANCE;
 
 import java.util.Map;
 

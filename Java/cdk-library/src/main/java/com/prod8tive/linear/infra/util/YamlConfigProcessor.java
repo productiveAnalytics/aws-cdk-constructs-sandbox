@@ -1,6 +1,6 @@
-package com.disney.linear.infra.util;
+package com.prod8ctive.infra.util;
 
-import com.disney.linear.infra.config.LambdaConfig;
+import com.prod8ctive.infra.config.LambdaConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;

@@ -1,4 +1,4 @@
-package com.disney.linear.infra.common;
+package com.prod8ctive.infra.common;
 
 import java.util.Iterator;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Spliterator;
 import java.util.stream.Stream;
 
-import static com.disney.linear.infra.common.CdkConstants.DEFAULT_REGION;
+import static com.prod8ctive.infra.common.CdkConstants.DEFAULT_REGION;
 
 import java.io.IOException;
 import java.nio.file.*;
